@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <test name="LoginTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="SeleniumLatest.LatestSelenium.LoginTest">
+        <methods>
+          <include name="setup"/>
+          <include name="failImage"/>
+          <include name="TestToFail"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- SeleniumLatest.LatestSelenium.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
