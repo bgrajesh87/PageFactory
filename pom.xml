@@ -13,24 +13,29 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  
-  <reporting>
-    <plugins>
-    <!-- TestNG-xslt related configuration. -->
+  <build>
+  <plugins>
       <plugin>
-        <groupId>org.reportyng</groupId>
-        <artifactId>reporty-ng</artifactId>
-        <version>1.2</version>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
         <configuration>
-          <!-- Output directory for the testng xslt report -->
-          <outputDir>/target/testng-xslt-report</outputDir>
-          <sortTestCaseLinks>true</sortTestCaseLinks>
-          <testDetailsFilter>FAIL,SKIP,PASS,CONF,BY_CLASS</testDetailsFilter>
-          <showRuntimeTotals>true</showRuntimeTotals>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M5</version>
+          <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
         </configuration>
       </plugin>
     </plugins>
-  </reporting>
+    </build>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
